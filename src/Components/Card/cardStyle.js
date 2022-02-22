@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
 		zIndex: 0,
 	},
 	showhideButton:{
-position:'relative',
-bottom:-20
+		position:'relative',
+		bottom: -18
 	},
 	imgStyle: {
 
@@ -37,7 +37,7 @@ bottom:-20
 	},
 	nameText:{
 		fontSize: 22,
-		color: "#FFFFFF",
+		color: color._WHITE,
 		fontWeight: "bold",
 		marginTop: 69,
 		marginLeft:wp(6),
@@ -46,21 +46,18 @@ bottom:-20
 	},
 	NumberText: {
 		fontSize: wp(4),
-		color:"#FFFFFF",
+		color:color._WHITE,
 		marginTop: 20,
 		marginLeft:24,
 		fontWeight: "400",
-		fontFamily: "Avenir Next",
 		letterSpacing: 5,
 	},
 	
 	NumberText2: {
 		fontSize: wp(4),
-		// color:"#FFFFFF",
 		marginTop: wp(5),
 		marginLeft:wp(6),
 		fontWeight: "400",
-		// fontFamily: "Avenir Next",
 		letterSpacing: 5
 	},
 	txtContainer: {
@@ -75,7 +72,6 @@ bottom:-20
 		textAlign: "left",
 		width:81,
 		height: 17,
-		fontFamily: "AvenirNext",
 		color: color._WHITE,
 		fontWeight: "normal"
 	},

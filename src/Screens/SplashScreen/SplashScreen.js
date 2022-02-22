@@ -7,7 +7,11 @@ import * as resources from 'resources';
 
 const SplashScreen = ({ navigation,  }) => {
 setTimeout(() => {
+<<<<<<< HEAD
 	navigation.navigate('Detail')
+=======
+	navigation.navigate('CardScreen')
+>>>>>>> 7032770402aee7b288b2f2edaf02e92af35a2664
 }, 2000);
 	
 

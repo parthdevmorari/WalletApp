@@ -52,7 +52,7 @@ const Containers = ({  }) => {
 
 	return (
 		<>
-			<SafeAreaView style={{ flex: 1, backgroundColor: theme.PRIMARY_BG }}>
+			{/* <SafeAreaView style={{ backgroundColor: theme.PRIMARY_BG }}> */}
 				<StatusBar
 					animated={true}
 					backgroundColor={bgBarColor}
@@ -60,7 +60,7 @@ const Containers = ({  }) => {
 					translucent={translucentMode}
 				/>
 				<Navigation setCurrentRouteName={(value) => { dispatch(setCurrentRouteName(value)); }} />
-		</SafeAreaView>
+		{/* </SafeAreaView> */}
 
 
 		</>
