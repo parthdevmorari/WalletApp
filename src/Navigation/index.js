@@ -7,6 +7,7 @@ import { Platform } from 'react-native';
 import SplashScreen from '../Screens/SplashScreen';
 import HomeScreen from '../Screens/HomeScreen';
 import DetailScreen from '../Screens/DetailScreen';
+import CardScreen from '../Screens/CardScreen';
 
 const Stack = createStackNavigator();
 const platform = Platform.OS;
@@ -30,6 +31,7 @@ export default function Navigation(props) {
 			<Stack.Navigator>
 				<Stack.Screen options={{ headerShown: false }} name="Splash" component={SplashScreen} />
 				<Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} /> 
+				<Stack.Screen options={{ headerShown: false }} name="CardScreen" component={CardScreen} /> 
 				<Stack.Screen options={{ headerShown: true ,headerStyle: {
         backgroundColor: theme.THEME_COLOR,
       }, headerTintColor: '#fff',}} name="Detail" component={DetailScreen} />

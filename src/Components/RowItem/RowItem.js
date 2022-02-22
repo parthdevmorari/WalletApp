@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text,Image,Switch } from "react-native";
+import ToggleSwitch from 'toggle-switch-react-native'
 import styles from "./RowItemStyle";
 
 const RowItem = (props) => {
@@ -28,6 +29,7 @@ const RowItem = (props) => {
                         onValueChange={onValueChange}
                         value={value}
                         style={[styles.swtichStyle]}
+                        
                     />
                 </View>}
 	

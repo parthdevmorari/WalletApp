@@ -9,26 +9,23 @@ const styles = StyleSheet.create({
 	showContainer: {
         backgroundColor: color._WHITE,
         paddingHorizontal: wp(5),
+        paddingTop: wp(1.5),
         paddingBottom: wp(5.5),
         borderTopLeftRadius: wp(1.2),
         borderTopRightRadius: wp(1.2),
         alignSelf: "flex-end",
         flexDirection:'row',
         alignItems:'center'
-
     },
     txt: {
         color: color._01D167,
         textAlign: "center",
         paddingLeft: wp(1.25),
         fontSize: wp(3),
-        fontFamily: "AvenirNext",
-
     },
     imageContainer: {
         width : wp(5),
         height: wp(5),
-
     },
     imgStyle: {
         width : "100%",

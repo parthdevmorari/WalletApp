@@ -5,12 +5,10 @@ import { theme } from '../../Constants/Theme'
 const styles = StyleSheet.create({
 
 	rowContainer: {
-		paddingLeft:wp(6),
 		flexDirection: "row",
-		overflow: "hidden",
 		justifyContent: "space-between",
-		paddingBottom: wp(8),
-		paddingTop: wp(3)
+		marginHorizontal:wp(6),
+		paddingVertical: wp(4),
 
 	},
 	row: {
@@ -24,28 +22,27 @@ const styles = StyleSheet.create({
 		paddingLeft: wp(2.5),
 	},
 	switchContainer : {
-		paddingLeft: wp(3.75),
-		justifyContent: "center"
+		justifyContent: "flex-start",
+		
 	},
 	
 	swtichStyle: {
-		width: 34,
-		height: 20,
-		marginRight: 24
+		fontSize:wp(2),
+		width: wp(8),
+		height: wp(2),
+		marginRight: wp(6),
 	},
 	titleTxt: {
-		fontSize : 14,
+		fontSize : wp(3.5),
 		textAlign: "left",
 		fontWeight: "bold",
-		color: "#25345F",
-		fontFamily: "Avenir Next"
+		color: color._25345F,
+		paddingBottom:wp(1)
 	},
 	subTitleTxt: {
 		fontSize : wp(3),
 		textAlign: "left",
-		color: "#222222",
-		opacity: 40,
-		fontFamily: "Avenir Next"
+		color:color._222222
 	},
 
 

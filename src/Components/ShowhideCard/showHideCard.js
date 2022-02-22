@@ -10,10 +10,7 @@ const ShowhideNumber = (props) => {
             <View style = {styles.imageContainer}>
                 <Image source={imageSource} style={styles.imgStyle} />
             </View>
-
             <Text style={styles.txt}>{title}</Text>
-
-
         </TouchableOpacity>
     )
 }
