@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
 		width: wp(10),
 		height: wp(6),
 		backgroundColor:color._01D167,
-		borderRadius: 4, 
+		borderRadius: wp(1), 
 	},
 	symbolStyle: {
 		fontSize: wp(3.5),

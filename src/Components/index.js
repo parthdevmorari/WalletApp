@@ -4,6 +4,8 @@ export {default as RowItem} from './RowItem';
 export {default as AmountDetail} from './AmountDetail';
 export {default as ShowhideCard} from './ShowhideCard';
 export {default as ProgressBar} from './ProgressBar';
+export {default as SpendAmountConatiner} from './SpendAmountContainer';
+
 
 
 

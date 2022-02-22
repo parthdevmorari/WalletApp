@@ -30,7 +30,7 @@ export default function Navigation(props) {
 			<Stack.Navigator>
 				<Stack.Screen options={{ headerShown: false }} name="Splash" component={SplashScreen} />
 				<Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} /> 
-				<Stack.Screen options={{ headerShown: true ,headerStyle: {
+				<Stack.Screen options={{ headerShown: false ,headerStyle: {
         backgroundColor: theme.THEME_COLOR,
       }, headerTintColor: '#fff',}} name="Detail" component={DetailScreen} />
 			

@@ -7,7 +7,7 @@ import * as resources from 'resources';
 
 const SplashScreen = ({ navigation,  }) => {
 setTimeout(() => {
-	navigation.navigate('Home')
+	navigation.navigate('Detail')
 }, 2000);
 	
 
