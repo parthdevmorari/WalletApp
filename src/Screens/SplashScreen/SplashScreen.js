@@ -10,8 +10,6 @@ setTimeout(() => {
 	navigation.navigate('MyTab')
 }, 2000);
 	
-
-	
 	return (
 		<View  style={[styles.container]}>
 		
