@@ -83,7 +83,7 @@ setMessage('');
 			request.date=date;
 			let data=[];
 			data.push(request)
-			dispatch(saveSpendingAmt(data,navigation))
+			dispatch(saveSpendingAmt(request, navigation))
 		}
 	}
 

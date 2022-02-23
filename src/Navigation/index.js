@@ -27,7 +27,7 @@ function MyTab({ navigation }) {
 	return (
 		<Tab.Navigator
 			headerMode={'none'}
-			initialRouteName="Login"
+			initialRouteName="Home"
 			activeColor={theme.THEME_COLOR}
 			inactiveColor={color._ccc}
 			barStyle={{
@@ -107,7 +107,7 @@ export default function Navigation(props) {
 			}}>
 			<Stack.Navigator>
 				<Stack.Screen options={{ headerShown: false }} name="Splash" component={SplashScreen} />
-				<Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} />
+				{/* <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} /> */}
 				<Stack.Screen options={{ headerShown: false }} name="MyTab" component={MyTab} /> 
 				<Stack.Screen options={{ headerShown: false }} name="CardScreen" component={CardScreen} /> 
 				<Stack.Screen options={{ headerShown: false }} name="AddExpense" component={AddExpenseScreen} /> 

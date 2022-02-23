@@ -5,7 +5,7 @@ import ApiList from "../../webservice/ApiList";
 export const saveSpendingAmt = (amout,navigation) => {	
 	return (dispatch) => {
 		dispatch({ type: types.SPENDING_SUCCESS, payload: amout });
-		navigation.navigate("Home")
+		navigation.navigate("MyTab")
 
 	};
 };

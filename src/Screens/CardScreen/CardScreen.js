@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {View, ScrollView, SafeAreaView} from 'react-native';
 import styles from './CardScreenStyle';
 import Details from '../../Components/Details';
@@ -10,14 +10,40 @@ import { useSelector, useDispatch } from "react-redux";
 const CardScreen = ({navigation}) => {
 	const [isEnabled, setIsEnabled] = useState(false);
 	const [freezeCard, setFreezeCard] = useState(false);
+	const [spendLimit, setSpendLimit] = useState(0);
+	const [spendPer, setSpendPer] = useState(0);
+	const [spendTotal, setSpendTotal] = useState(0);
 	const spendingData = useSelector(state => state.spending);
+
+	const getSpendPer =()=>{
+		setSpendLimit(spendingData.maxLimit.amount)
+		let spendAmount = 0;
+		for(let i = 0; i < spendingData.spendData.length; i++){
+			spendAmount += parseInt(spendingData.spendData[i].amount)
+		}
+		setSpendTotal(spendAmount)
+		if(spendingData?.maxLimit?.amount && spendAmount > 0){
+			let spendPerData = (spendAmount/spendingData.maxLimit.amount) ;
+			let per =	parseFloat(spendPerData).toFixed(2);
+			setSpendPer(per);
+			console.log("spendingData", per);
+		}
+	}
    
+	useEffect(() => {
+		getSpendPer()
+	}, [])
+
+	useEffect(() => {
+		getSpendPer()
+	}, [spendingData])
+
 	const toggleSwitch = () => {
-		setIsEnabled(previousState => !previousState);
+		setIsEnabled(!isEnabled);
 		console.log("111111")
 		navigation.navigate('Detail')
 	}
-	const toggleFreezeCard = () => setFreezeCard(previousState => !previousState);
+	const toggleFreezeCard = () => setFreezeCard(!freezeCard);
   
   return (
     <View style={[styles.container]}>
@@ -48,8 +74,9 @@ const CardScreen = ({navigation}) => {
 					<View style={styles.bottom}>
 					<ProgressBar
 						title={'Debit card spending limit'}
-						spendAmount={'$345'}
-						totalAmountAvaliable={'$5,000'}
+						spendAmount={'$'+spendTotal}
+						totalAmountAvaliable={'$'+spendLimit}
+						progress={spendPer}
 					/>
 						<RowItem
 							title={'Top-up account'}

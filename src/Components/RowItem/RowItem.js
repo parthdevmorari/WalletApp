@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text,Image,Switch } from "react-native";
+import { View, Text,Image } from "react-native";
 import styles from "./RowItemStyle";
+import {Switch} from '@Component';
 
 const RowItem = (props) => {
 
@@ -25,7 +26,7 @@ const RowItem = (props) => {
                     <Switch
                         trackColor={{ false: inactiveTrackColor, true: activeTrackColor }}
                         thumbColor={value ?inactiveThumbColor : activeThumbColor}
-                        onValueChange={onValueChange}
+                        onPress={onValueChange}
                         value={value}
                         style={[styles.swtichStyle]}
                         

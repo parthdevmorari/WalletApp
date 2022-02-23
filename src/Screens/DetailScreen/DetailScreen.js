@@ -72,15 +72,15 @@ const DetailScreen = ({ navigation, route }) => {
 				<View style={styles.SpendAmountConatiner}>
 					<SpendAmountConatiner
 						title={'5,000'}
-						onPress={() => { setAmount("5,000") }}
+						onPress={() => { setAmount("5000") }}
 					/>
 					<SpendAmountConatiner
 						title={'10,000'}
-						onPress={() => { setAmount("10,000") }}
+						onPress={() => { setAmount("10000") }}
 					/>
 					<SpendAmountConatiner
 						title={'20,000'}
-						onPress={() => { setAmount("20,000") }}
+						onPress={() => { setAmount("20000") }}
 					/>
 				</View>
 				<TouchableOpacity style={styles.buttonStyle} onPress={()=>saveSpendingLimit()} >

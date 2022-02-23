@@ -4,32 +4,39 @@ import { color } from '../../Constants/Color'
 import { theme } from '../../Constants/Theme'
 const styles = StyleSheet.create({
 
-    spendContainer:{
-		width: 366,
-		height: 41,
+    mainContainer:{
+// alignItems:'center'
+paddingLeft:wp(6)
+	},
+		spendContainer:{
+		// width: wp(95),
+		paddingVertical:wp(2.5),
 		flexDirection: "row",
 		justifyContent: "space-between"
 	},
+	row:{
+		flexDirection: "row",
+
+	},
 	spendTxt:{
-		color: "#222222",
-		fontSize: 13,
-		marginLeft: 24,
-		marginTop: 20,
+		color: color._222222,
+		fontSize: wp(3.5),
+		marginTop: wp(5),
 		fontWeight: "bold",
 	},
 	spendTxt2:{
-		color: "#01D167",
-		fontSize: 13,
-		marginTop: 20,
+		color: color._01D167,
+		fontSize: wp(3.5),
+		marginTop: wp(5),
 		fontWeight: "bold",
-		paddingRight: wp(2.5) ,
 	},
 	totalAmount:{
-		color: "grey",
+		color: color._555555,
 		fontSize: 13,
 		marginTop: 20,
 		fontWeight: "bold",
-		paddingHorizontal: wp(6)
+		paddingRight: wp(6),
+		paddingLeft: wp(1.5),
 	},
 	amountBox :{
 		flexDirection : "row",

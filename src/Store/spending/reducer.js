@@ -11,7 +11,7 @@ const spendingReducer = (state = initialState, action) => {
 		case types.SPENDING_SUCCESS:
 			return {
 				...state,
-				spendData: action.payload
+				spendData: [state.spendData, {...action.payload}]
 			};
 		case types.SET_SPENDING_LIMIT_SUCCESS:
 			return {
