@@ -1,62 +1,71 @@
 import React, { useRef, useState } from 'react';
-import { Text, View, TextInput, TouchableOpacity, Image, FlatList, ScrollView } from 'react-native';
+import { Text, View, ScrollView,TouchableOpacity,SafeAreaView } from 'react-native';
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./AddExpenseScreenStyle";
 import Icon from 'react-native-vector-icons/Feather';
 import * as resources from 'resources';
 import {InputField,Button,TextArea} from '@Component';
-
+import {saveSpendingAmt} from '../../Store/spending';
+import moment from 'moment';
+const date = moment().format("DD MMM YYYY");
 
 const AddExpenseScreen = ({ navigation, route }) => {
 
 
 	const dispatch = useDispatch();
-	const stateGlobal = useSelector((state) => state.global);
-	const stateUser = useSelector((state) => state.user);
-	const [firstName, setFirstName] = useState('');
-	const [lastName, setLastName] = useState('');
-	const [email, setEmail] = React.useState('');
-	const [phone, setPhone] = useState('')
+	const [title, setTitle] = React.useState('');
+	const [amount, setAmount] = useState('')
 	const [message, setMessage] = React.useState("");
-	const [messageError, setMessageError] = React.useState("");
+	const [titleError, setTitleError] = React.useState(false);
+	const [amountError, setAmountError] = React.useState(false);
+	const [messageError, setMessageError] = React.useState(false);
 	const child = React.useRef();
+React.useEffect(() => {
+		const unsubscribe = navigation.addListener('focus', (e) => {
+			_clearState()
+		});
+		return unsubscribe;
+	});
 
-	// useEffect(() => {
-	// }, [multipleImages]);   swiper.current.scrollBy(1);
-
-
-	// React.useEffect(() => {
-	// 	const unsubscribe = navigation.addListener('focus', (e) => {
-			
-	// 	});
-	// 	return unsubscribe;
-	// });
-	// React.useEffect(() => {
-		
-	// }, [stateUser]);
-
-
-	const _doValidation = () => {
+	const _clearState = () => {
+setTitle('');
+setAmount('');
+setMessage('');
+	}
+	
+		const _doValidation = () => {
 		let isValidForm = true;
 		let messageText = '';
-	 if (email === '') {
+	 if (title === ''&& amount === ''&& message === '') {
+			setTitleError(true)
+			setAmountError(true)
 			setMessageError(true)
 			isValidForm = false
-			messageText='Please enter your email'	
+	
 
-		}
-		else if (phone === '') {
-			setMessageError(true)
+		}else if (title === ''&& amount === '') {
+			setTitleError(true)
+			setAmountError(true)
 			isValidForm = false
-			messageText='Please enter your phone number'	
-
+	
 		}
-		else if (phone.length<10) {
+		else if (amount === ''&& message === '') {
+			setAmountError(true)
 			setMessageError(true)
+			isValidForm = false	
+		} else if (title === '') {
+			setTitleError(true)
+			isValidForm = false	
+	
+			}
+			
+		else if (amount === '') {
+			setAmountError(true)
 			isValidForm = false
-			messageText='Please enter valid phone number'	
+			messageText='Please enter amount '	
 
 		}
+		
 		else if (message === '') {
 			setMessageError(true)
 			isValidForm = false
@@ -65,47 +74,51 @@ const AddExpenseScreen = ({ navigation, route }) => {
 		
 
 		if (isValidForm === false) {
-			alert(messageText);
 		}
 		if (isValidForm) {
 			let request = {}
-			request.first_name = firstName;
-			request.last_name = lastName;
-			request.email = email;
-			request.phone = phone;
-			request.message =message;
-			// dispatch(getInTouchAction(request,navigation))
+			request.title = title;
+			request.amount = amount;
+			request.description =message;
+			request.date=date;
+			let data=[];
+			data.push(request)
+			dispatch(saveSpendingAmt(data,navigation))
 		}
 	}
 
 
-	
-
-
 	return (
 		<View style={styles.flex1}>
+			<SafeAreaView style={styles.safeAreaView}/>
+
 			<ScrollView style={[styles.container,]}>
 				
 				
 				
 				 <InputField
-				value={email}
+				value={title}
 				placeholder={'Enter your Title'}
 				title={'Title'}
-				onChangeText={item => { setEmail(item) }}
+				onChangeText={item => { setTitle(item),setTitleError(false) }}
+				inputContainerStyle={[titleError===true?styles.errorStyle:{}]}
+
 				 />
 				 <InputField
-				value={phone}
+				value={amount}
 				title={'Amount'}
+				keyboardType={'number-pad'}
 				placeholder={'Enter Amount'}
-				onChangeText={item => { setPhone(item) }}
+				onChangeText={item => { setAmount(item),setAmountError(false) }}
+				inputContainerStyle={[amountError===true?styles.errorStyle:{}]}
+
 				 />
 				<TextArea label={'Message'}
 					// mainContainerStyle={styles.textArea}
 					secureTextEntry={false} multiline={true} keyboardType={'default'}
 					numberOfLines={4}
-					// error={messageError}
-					inputContainerStyle={styles.textAreaContainer}
+					// error={messageError} 
+					inputContainerStyle={[messageError===true?styles.errorStyle:{}]}
 					onChangeText={text => setMessage(text)} value={message}
 					onChange={() => { setMessageError(false) }}
 					placeholder={"Please describe your Message "}
@@ -115,7 +128,9 @@ const AddExpenseScreen = ({ navigation, route }) => {
 				
 			</ScrollView>
 			<View style={[styles.submitBtnContainer,]}>
-				<Button title={'Submit'} onPress={_doValidation}/>
+			<TouchableOpacity style={styles.buttonStyle} onPress={_doValidation}>
+					<Text style={styles.buttonTxt}>Submit</Text>
+				</TouchableOpacity>
 			</View>
 		
 		</ View>

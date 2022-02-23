@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
 		height:hp(100),
 		backgroundColor: '#0C365A',
 	},
+	safeAreaView:{
+		flex: 0,
+		backgroundColor: '#0C365A',
+	},
 	topContainer:{
 		width: '100%',
 		height: hp(25),
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
 	containeContainer : {
 	},
 	bottom:{
-		paddingTop:hp(17),
+		paddingTop:hp(20),
 		backgroundColor: color._WHITE,
 		borderTopLeftRadius: wp(6),
 		borderTopRightRadius: wp(6),

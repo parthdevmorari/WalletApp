@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, Image, TextInput, TouchableOpacity,KeyboardAvoidingView } from "react-native";
 import styles from "./ProfileScreenStyle";
+import {NoRecord} from '@Component';
+
 const ProfileScreen = ({ navigation, route }) => {
 	return (
-		<View>
-
-		</View>
+<NoRecord title={'Comming Soon'}/>
+		
 	);
 }
 

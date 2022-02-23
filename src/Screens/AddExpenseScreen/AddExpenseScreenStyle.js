@@ -9,9 +9,37 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor:color._WHITE
 	},
+	safeAreaView:{
+		flex: 0,
+		backgroundColor:color._WHITE
+	},
 	container: {
 		flex: 1,
 		paddingHorizontal: 15,
+
+	},
+	errorStyle:{
+
+		borderBottomColor:color._error
+	},
+	buttonStyle: {
+		position :"absolute",
+		bottom: wp(6),
+		width: wp(76),
+		backgroundColor: color._01D167,
+		padding: wp(5),
+		borderRadius: wp(12),
+		marginHorizontal: wp(12),
+		alignItems: 'center',
+		elevation: wp(1),
+
+	  },
+	  buttonTxt : {
+		  color : color._WHITE,
+		  fontWeight: "bold",
+		  fontSize: wp(3.75)
+	  },
+	textAreaContainer:{
 
 	},
 	titleInfo: {

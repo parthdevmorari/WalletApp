@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: color._0C365A,
 	},
+	safeAreaView:{
+        flex: 0,
+		backgroundColor: color._0C365A,
+    },
 	upperContainer: {
 		flex: 0.20,
 	},
@@ -87,9 +91,18 @@ const styles = StyleSheet.create({
 		fontWeight : "700",
 		marginLeft: wp(2)
 	  },
+	  errorStyle:{
+		borderTopColor:color._error,
+  
+	  },
+	  
+	  txtContainer2:{
+		borderTopColor:color._BLACK
+		 
+	},
 	  txtContainer:{
-		  borderTopWidth:0.2,
-		  paddingTop : wp(2.5)
+		  borderTopWidth:1,
+		  paddingTop : wp(2.5),
 		   
 	  },
 	  txtStyle2:{

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image,SafeAreaView } from "react-native";
 import styles from "./SplashScreenStyle";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as resources from 'resources';
@@ -12,6 +12,7 @@ setTimeout(() => {
 	
 	return (
 		<View  style={[styles.container]}>
+		<SafeAreaView style={styles.safeAreaView}/>
 		
 		</View>
 	);

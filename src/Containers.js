@@ -1,31 +1,46 @@
 import React, { useEffect } from 'react';
-import { SafeAreaView,BackHandler, StatusBar, StyleSheet,} from "react-native";
+import { SafeAreaView, BackHandler, StatusBar, StyleSheet, } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import Navigation from "./Navigation";
 import { setCurrentRouteName } from "./Store/global";
-import { theme } from './Constants/Theme';
+import { resetWeekLimitAction } from "./Store/spending";
 import { color } from './Constants/Color';
+import moment from 'moment';
 
-const Containers = ({  }) => {
+const Containers = ({ }) => {
 	const dispatch = useDispatch();
 	const stateGlobal = useSelector(state => state.global);
+	const spendingData = useSelector(state => state.spending);
 	const [bgBarColor, setBgBarColor] = React.useState(color._WHITE);
 	const [bgBarCotentColor, setBgBarCotentColor] = React.useState('dark-content');
 	const [translucentMode, setTranslucentMode] = React.useState(false);
-
-
 	const effectDependency = stateGlobal.currentRouteName
 
+
+	useEffect(() => {
+		_checkWeek()
+	}, []);
 	useEffect(() => {
 		_StatusBar()
 
 	}, [effectDependency]);
+	const _checkWeek = () => {
+		const weekEndDate = spendingData.weekEndDate
+		const today = moment(new Date()).format('DD MMM YYYY');
+		const isAfter = moment(weekEndDate).isBefore(today);
+		if (weekEndDate) {
+			alert(today + weekEndDate)
+			if (isAfter) {
+				dispatch(resetWeekLimitAction())
+			}
+		}
+	}
 
 	const _StatusBar = () => {
-	 if (stateGlobal.currentRouteName === 'Home'|| stateGlobal.currentRouteName === 'Detail'){
-			setBgBarColor('transparent')
-			setBgBarCotentColor('light-content')
-			setTranslucentMode(true)
+		if (stateGlobal.currentRouteName === 'CardScreen' || stateGlobal.currentRouteName === 'Detail') {
+			setBgBarColor(color._0C365A)
+			setBgBarCotentColor('dark-content')
+			setTranslucentMode(false)
 		}
 		else {
 			setBgBarColor(color._WHITE)
@@ -36,7 +51,7 @@ const Containers = ({  }) => {
 
 	const backHandlerListener = (value) => {
 		if (stateGlobal.currentRouteName == 'Home') {
-			
+
 			return true;
 		} else {
 			BackHandler.removeEventListener("hardwareBackPress", backHandlerListener);
@@ -52,15 +67,14 @@ const Containers = ({  }) => {
 
 	return (
 		<>
-			{/* <SafeAreaView style={{ backgroundColor: theme.PRIMARY_BG }}> */}
-				<StatusBar
-					animated={true}
-					backgroundColor={bgBarColor}
-					barStyle={bgBarCotentColor}
-					translucent={translucentMode}
-				/>
-				<Navigation setCurrentRouteName={(value) => { dispatch(setCurrentRouteName(value)); }} />
-		{/* </SafeAreaView> */}
+			<StatusBar
+				animated={true}
+				backgroundColor={bgBarColor}
+				barStyle={bgBarCotentColor}
+				translucent={translucentMode}
+			/>
+			<Navigation setCurrentRouteName={(value) => { dispatch(setCurrentRouteName(value)); }} />
+			{/* </SafeAreaView> */}
 
 
 		</>

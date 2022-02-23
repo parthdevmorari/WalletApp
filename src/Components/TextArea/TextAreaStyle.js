@@ -25,8 +25,10 @@ const styles = StyleSheet.create({
 		width: '100%',
 		borderRadius: 0,
 		marginBottom: 0,
-		borderWidth:1,
+		// borderWidth:1,
 		borderColor:theme.PRIMARY_BORDER_COLOR,
+		borderBottomWidth:1,
+
     },
     
     indexInput:{
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
 		borderStyle: 'solid',
         minHeight: 100,
         maxHeight: 'auto',
-		paddingLeft: 10,
+		// paddingLeft: 10,
 		borderColor:theme.PRIMARY_BORDER_COLOR,
     },
     

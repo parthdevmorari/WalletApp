@@ -15,16 +15,18 @@ const styles = StyleSheet.create({
 		color:theme.LABLE_COLOR,
 	},
 	InputRow: {
-		borderWidth:1,
+		// borderWidth:1,
 		borderColor:theme.PRIMARY_BORDER_COLOR,
 		// height:wp(11),
 		borderRadius:3,
 		flexDirection:'row',
 		backgroundColor:theme.action_Buttons_Text_Color,
+		borderBottomWidth:1,
+
 	},
 	inputContainer: {
 		minHeight:wp(11),
-		paddingHorizontal:10,
+		// paddingHorizontal:10,
 	}, 
 	iconRowpass:{
         position: 'absolute',

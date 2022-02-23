@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
 		paddingHorizontal:25,
 		backgroundColor:theme.SCREEN_BACKGROUND_COLOR,
 	},
+	safeAreaView:{
+        flex: 0,
+		backgroundColor:theme.SCREEN_BACKGROUND_COLOR,
+    },
 	imgLogo: {
 		width: "50%",
 		height: "50%",

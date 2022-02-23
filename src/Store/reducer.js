@@ -3,6 +3,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { persistReducer } from "redux-persist";
 
 import global from './global';
+import spending from './spending';
 
 
 const config = {
@@ -12,7 +13,7 @@ const config = {
 };
 
 const AppReducers = combineReducers({
-	global 
+	global ,spending
 });
 
 const rootReducer = (state, action) => {
