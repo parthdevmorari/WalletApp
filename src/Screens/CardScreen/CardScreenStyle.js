@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import { color } from "../../Constants/Color";
 const styles = StyleSheet.create({
@@ -22,7 +22,15 @@ const styles = StyleSheet.create({
 		backgroundColor: 'transparent'
 	},
 	lowerContainer:{
-		height: hp(85),
+		height: hp(93.5),
+		...Platform.select({
+			ios: {
+			height: hp(93.5)
+			},
+			andriod: {
+				height: hp(93.5)
+			}
+		})
 	},
 	cardContainer:{
 		height:wp(25),
