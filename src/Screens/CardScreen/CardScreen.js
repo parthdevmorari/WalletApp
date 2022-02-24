@@ -4,7 +4,8 @@ import styles from './CardScreenStyle';
 import {AmountDetail, Card, RowItem, ProgressBar} from '@Component';
 import * as resources from 'resources';
 import {color} from '../../Constants/Color';
-import { useSelector } from "react-redux";
+import { useSelector ,useDispatch} from "react-redux";
+import { resetWeekLimitAction } from '../../Store/spending';
 
 const CardScreen = ({navigation}) => {
 	const [spendLimitvisiible, setspendLimitvisiible] = useState(false);
@@ -13,9 +14,13 @@ const CardScreen = ({navigation}) => {
 	const [spendPer, setSpendPer] = useState(0);
 	const [spendTotal, setSpendTotal] = useState(0);
 	const spendingData = useSelector(state => state.spending);
+	const dispatch = useDispatch();
 
 	const getSpendPer =()=>{
-		setSpendLimit(spendingData.maxLimit.amount)
+		if(spendingData.maxLimit){
+			setSpendLimit(spendingData.maxLimit.amount)
+			setspendLimitvisiible(true)
+		}
 		let spendAmount = 0;
 		for(let i = 0; i < spendingData.spendData.length; i++){
 			spendAmount += parseInt(spendingData.spendData[i].amount)
@@ -25,10 +30,14 @@ const CardScreen = ({navigation}) => {
 			let spendPerData = (spendAmount/spendingData.maxLimit.amount) ;
 			let per =	parseFloat(spendPerData).toFixed(2);
 			setSpendPer(per);
-			console.log("spendingData", per);
 		}
 	}
-   
+	React.useEffect(() => {
+		const unsubscribe = navigation.addListener('focus', (e) => {
+			getSpendPer()
+		});
+		return unsubscribe;
+	});
 	useEffect(() => {
 		getSpendPer()
 	}, [])
@@ -38,8 +47,14 @@ const CardScreen = ({navigation}) => {
 	}, [spendingData])
 
 	const toggleSwitch = () => {
+		if(spendLimitvisiible!==true){
 		setspendLimitvisiible(!spendLimitvisiible);
 		navigation.navigate('Detail')
+		}else{
+			setspendLimitvisiible(false)
+
+			dispatch(resetWeekLimitAction())
+		}
 	}
 	
 	const toggleFreezeCard = () => setFreezeCard(!freezeCard);

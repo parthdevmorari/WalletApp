@@ -9,9 +9,11 @@ const initialState = {
 const spendingReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case types.SPENDING_SUCCESS:
+			let data = [...state.spendData, action.payload]
+			console.log(data)
 			return {
 				...state,
-				spendData: [state.spendData, {...action.payload}]
+				spendData:[...state.spendData, action.payload]
 			};
 		case types.SET_SPENDING_LIMIT_SUCCESS:
 			return {

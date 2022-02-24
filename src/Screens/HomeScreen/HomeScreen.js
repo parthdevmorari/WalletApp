@@ -14,7 +14,10 @@ const HomeScreen = ({ navigation, route }) => {
 		setData(Expenditure.spendData)
 		setRefresh(!refresh)
 	}, [])
-
+	React.useEffect(() => {
+		setData(Expenditure.spendData)
+		setRefresh(!refresh)
+	}, [Expenditure.spendData])
 	const goToExpense = () => {
 		navigation.navigate('AddExpense')
 	}
@@ -24,7 +27,7 @@ const HomeScreen = ({ navigation, route }) => {
 			<View style={styles.itemBox} >
 				<View style={styles.itemBoxRow2} >
 					<Text style={styles.dateTxt} >{item.date}</Text>
-					<Text style={styles.amountTxt} >{item.amount}</Text>
+					<Text style={styles.amountTxt} >{item.amount+" $"}</Text>
 				</View>
 				<View style={styles.itemBoxRow} >
 					<Text style={styles.titleTxt} >{item.title}</Text>

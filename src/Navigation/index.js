@@ -18,6 +18,7 @@ import CardScreen from '../Screens/CardScreen';
 import PaymentScreen from '../Screens/PaymentScreen'
 import ProfileScreen from '../Screens/ProfileScreen'
 import AddExpenseScreen from '../Screens/AddExpenseScreen'
+import CreditScreen from '../Screens/CreditScreen'
 
 const Stack = createStackNavigator();
 const platform = Platform.OS;
@@ -66,8 +67,8 @@ function MyTab({ navigation }) {
 				}}
 			/>
 			<Tab.Screen
-				name="Detail"
-				component={DetailScreen}
+				name="Credit"
+				component={CreditScreen}
 				options={{
 					tabBarLabel: 'Credit',
 					tabBarIcon: ({ color, size }) => (
@@ -106,14 +107,10 @@ export default function Navigation(props) {
 				props.setCurrentRouteName(currentRouteName);
 			}}>
 			<Stack.Navigator>
-				<Stack.Screen options={{ headerShown: false }} name="Splash" component={SplashScreen} />
-				{/* <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} /> */}
-				<Stack.Screen options={{ headerShown: false }} name="MyTab" component={MyTab} /> 
-				<Stack.Screen options={{ headerShown: false }} name="CardScreen" component={CardScreen} /> 
-				<Stack.Screen options={{ headerShown: false }} name="AddExpense" component={AddExpenseScreen} /> 
-				<Stack.Screen options={{ headerShown: false ,headerStyle: {
-        backgroundColor: color._0C365A,
-      }, headerTintColor: '#fff',}} name="Detail" component={DetailScreen} />
+				<Stack.Screen options={{ headerShown: false ,gestureEnabled:false}} name="Splash" component={SplashScreen} />
+				<Stack.Screen options={{ headerShown: false ,gestureEnabled:false}} name="MyTab" component={MyTab} /> 
+				<Stack.Screen options={{ headerShown: false ,gestureEnabled:false}} name="AddExpense" component={AddExpenseScreen} /> 
+				<Stack.Screen options={{ headerShown: false ,gestureEnabled:false}} name="Detail" component={DetailScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
