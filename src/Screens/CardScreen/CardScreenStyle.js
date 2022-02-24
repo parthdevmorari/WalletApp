@@ -5,12 +5,6 @@ const styles = StyleSheet.create({
 	container: {
 		height:hp(100),
 		backgroundColor:color._0C365A,
-
-	},
-	safeAreaView:{
-		flex: 0,
-		backgroundColor:color._0C365A,
-
 	},
 	topContainer:{
 		width: '100%',
@@ -28,9 +22,7 @@ const styles = StyleSheet.create({
 		backgroundColor: 'transparent'
 	},
 	lowerContainer:{
-		height: hp(75),
-	},
-	lowerMainContainer:{		
+		height: hp(85),
 	},
 	cardContainer:{
 		height:wp(25),
