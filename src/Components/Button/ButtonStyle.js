@@ -22,10 +22,6 @@ const styles = StyleSheet.create({
 		position:'absolute',
 		bottom:wp(2),
 		width:'100%',
-		// left:15,
-		// width:'92.3%',
-		// marginLeft:15,
-		// marginRight:15,
 	},
 	btnText: {
 		color:theme.action_Buttons_Text_Color,

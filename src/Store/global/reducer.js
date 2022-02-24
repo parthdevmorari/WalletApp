@@ -2,14 +2,8 @@ import * as types from './actionTypes';
 
 const initialState = {
 	loading: false,
-	translation: {},
 	isInternetConnected: true,
-	errorMessage: '',
-	criptoListData: [],
-	criptoDetailData: [],
-	isError: false,
 	currentRouteName: '',
-	currentLanguage: '',
 };
 const globalReducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -36,42 +30,11 @@ const globalReducer = (state = initialState, action) => {
 					isInternetConnected: action.payload
 				};
 			}
-		case types.ON_ERROR_RECEIVED:
-			return {
-				...state,
-				loading: false,
-				errorMessage: action.payload.message,
-				isError: action.payload.type
-			};
-		case types.CONFIG_SUCCESS:
-			return {
-				...state,
-				criptoListData: [...action.payload.data],
-			};
-		case types.CONFIG_ERROR:
-			return {
-				...state,
-				message: action.payload,
-			};
-		case types.CRIPTO_DETAIL_SUCCESS:
-			return {
-				...state,
-				criptoDetailData: [...action.payload.data],
-			};
-		case types.CRIPTO_DETAIL_FAILURE:
-			return {
-				...state,
-				message: action.payload,
-			};
 		case types.SET_CURRENT_ROUTE_NAME:
 			return {
 				...state,
 				currentRouteName: action.payload,
 			};
-
-
-
-
 		default:
 			return state
 	}

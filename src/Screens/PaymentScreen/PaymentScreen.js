@@ -1,5 +1,4 @@
 import React from "react";
-import { View, Text, Image, TextInput, TouchableOpacity,KeyboardAvoidingView,SafeAreaView } from "react-native";
 import styles from "./PaymentScreenStyle";
 import {NoRecord} from '@Component';
 

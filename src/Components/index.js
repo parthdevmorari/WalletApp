@@ -1,4 +1,3 @@
-export {default as organisms} from './organisms';
 export {default as Card} from './Card';
 export {default as RowItem} from './RowItem';
 export {default as AmountDetail} from './AmountDetail';
@@ -11,7 +10,6 @@ export {default as TextArea} from './TextArea';
 export {default as InputField} from './InputField';
 export {default as Button} from './Button';
 export {default as TextInput} from './TextInput';
-export {default as Loader} from './Loader/Loader';
 export {default as NoRecord} from './NoRecord';
 
 

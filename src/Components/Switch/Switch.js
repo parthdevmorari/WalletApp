@@ -5,7 +5,7 @@ import * as resources from 'resources';
 
 const Switch = ({ value, onPress, textStyle, size = 50, ...props }) => (
 	<TouchableOpacity onPress={onPress} {...props}>
-		<Image style={{ width: 50, height: 25, resizeMode:'contain' }} source={value ? resources.ON : resources.OFF} />
+		<Image style={[styles.image,value===true?styles.active:styles.inActive]} source={value===true?resources.ON:resources.OFF} />
 	</TouchableOpacity>
 );
 

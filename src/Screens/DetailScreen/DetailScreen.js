@@ -1,40 +1,36 @@
 import React from "react";
-import { View, Text, Image, TextInput, TouchableOpacity,KeyboardAvoidingView,SafeAreaView } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity, SafeAreaView } from "react-native";
 import styles from "./DetailScreenStyle";
 import { SpendAmountConatiner } from '@Component'
 import * as resources from 'resources';
-import {saveSpendingAmt,setSpendingAmtLimit } from '../../Store/spending';
-import { useSelector, useDispatch } from "react-redux";
+import { setSpendingAmtLimit } from '../../Store/spending';
+import { useDispatch } from "react-redux";
 import moment from 'moment';
 const date = moment().format("DD MMM YYYY");
-const expireDate = moment(Date.now() + 7 * 24 * 3600 * 1000).format('DD MMM YYYY'); 
+const expireDate = moment(Date.now() + 7 * 24 * 3600 * 1000).format('DD MMM YYYY');
 
 const DetailScreen = ({ navigation, route }) => {
-
 	const dispatch = useDispatch();
-	const stateGlobal = useSelector(state => state.spending);
-
 	const [amount, setAmount] = React.useState("");
 	const [messageError, setMessageError] = React.useState(false);
 
+
 	const saveSpendingLimit = () => {
-		console.log("stateGlobal", stateGlobal)
-		if(amount!==""){
-			let data={
-				amount:amount,
-				date:date,
-				expireDate:expireDate,
+		if (amount !== "") {
+			let data = {
+				amount: amount,
+				date: date,
+				expireDate: expireDate,
 			}
-		dispatch(setSpendingAmtLimit(data,navigation))
-	}else{
-		setMessageError(true)
-		// alert("You need to add Some Amount"+messageError)
-	}
+			dispatch(setSpendingAmtLimit(data, navigation))
+		} else {
+			setMessageError(true)
+		}
 	}
 
 	return (
 		<View style={styles.container}>
-			<SafeAreaView style={styles.safeAreaView}/>
+			<SafeAreaView style={styles.safeAreaView} />
 			<View style={styles.upperContainer}>
 				<View style={styles.logoContainer}>
 					<Image source={resources.Logo} style={styles.logoStyle} />
@@ -59,13 +55,13 @@ const DetailScreen = ({ navigation, route }) => {
 					</View>
 					<View>
 						<TextInput style={styles.inputBox}
-							onChangeText={(value)=>{setAmount(value),setMessageError(false)}}
+							onChangeText={(value) => { setAmount(value), setMessageError(false) }}
 							value={amount}
 							keyboardType={"number-pad"}
 						/>
 					</View>
 				</View>
-				<View style={[styles.txtContainer,messageError===true?styles.errorStyle:styles.txtContainer2]}>
+				<View style={[styles.txtContainer, messageError === true ? styles.errorStyle : styles.txtContainer2]}>
 					<Text style={styles.txtStyle2}>Here weekly means the last 7 days - not the calendar week</Text>
 				</View>
 
@@ -83,7 +79,7 @@ const DetailScreen = ({ navigation, route }) => {
 						onPress={() => { setAmount("20000") }}
 					/>
 				</View>
-				<TouchableOpacity style={styles.buttonStyle} onPress={()=>saveSpendingLimit()} >
+				<TouchableOpacity style={styles.buttonStyle} onPress={() => saveSpendingLimit()} >
 					<Text style={styles.buttonTxt}>Save</Text>
 				</TouchableOpacity>
 

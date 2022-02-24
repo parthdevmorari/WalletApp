@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 	},
 	container: {
 		flex: 1,
-		paddingHorizontal: 15,
+		paddingHorizontal:wp(3.75),
 
 	},
 	errorStyle:{
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 	},
 	titleInfo: {
 		paddingHorizontal:0,
-		paddingVertical:5,
+		paddingVertical:wp(1.25),
 
 	},
 	titleInfoText: {
@@ -53,36 +53,36 @@ const styles = StyleSheet.create({
 		fontSize:wp(4.5),
 	},
 	inputLabel: {
-		marginTop: 20,
-		marginBottom: 8,
+		marginTop: wp(5),
+		marginBottom: wp(2),
 		color: theme.PRIMARY_TEXT_COLOR_WHITE,
 		fontSize: wp(4), //15
 	}, 
 	inputView: {
-		height: 100,
+		height: wp(25),
 		borderWidth: 1,
 		borderColor: theme.Input_View_Border,
-		fontSize: 18,
-		marginBottom: 8,
+		fontSize: wp(4.5),
+		marginBottom: wp(2),
 	},
 	textArea: {
 		marginVertical:wp(5),
 	},
 	uploadButton:{
-		height: 40,
+		height: wp(10),
 		backgroundColor:theme.action_Buttons_BG,
 		justifyContent: 'center',
 		alignItems: 'center',
-		marginTop: 10,
-		marginBottom: 20,
-		borderRadius:5,
+		marginTop: wp(2.5),
+		marginBottom: wp(5),
+		borderRadius:wp(1.25),
 	},
 	uploadButtonTxt:{
 		color:theme.PRIMARY_TEXT_COLOR_WHITE,
-		fontSize: 16,
+		fontSize: wp(4),
 	},
 	uploadButtonIcon:{
-		fontSize: 20,
+		fontSize: wp(5),
 		color: theme.PRIMARY_TEXT_COLOR_WHITE,
 	},
 	uploadImgContainer:{
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
 	},
 	uploadImgCol:{
 		width: (WIDTH / 3) - 16,
-		height: 100,
+		height: wp(25),
 		backgroundColor: theme.PRIMARY_CARD_BG,
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -113,26 +113,25 @@ const styles = StyleSheet.create({
 		zIndex:1200
 	},
 	uploadDeletBtnIcon:{
-		fontSize: 20,
+		fontSize: wp(5),
 		backgroundColor: theme.PRIMARY_TEXT_COLOR_BLACK,
 		color:theme.PRIMARY_TEXT_COLOR_WHITE,
-		borderRadius: 100,
+		borderRadius: wp(25),
 	},
 	submitBtnContainer: {
 		justifyContent: 'flex-end',
-		padding: 15,
+		padding: wp(3.75),
 
 	},
 	dropInputContainer: {
 		borderColor: theme.Input_View_Border,
 		borderWidth: wp(0.25),
-		height: 50,
+		height: wp(12.5),
 		width: '100%',
 		backgroundColor:theme.PRIMARY_BG,
 		justifyContent: 'center',
-		paddingLeft: 10,
+		paddingLeft: wp(2.5),
 		borderRadius:5,
-		// marginTop: wp(1.25),
 	},
 	dropdownIcon: {
 		color:theme.LABLE_COLOR,
@@ -146,9 +145,9 @@ const styles = StyleSheet.create({
 		zIndex: 1,
 		...Platform.select({
 			android: {
-				minHeight: 80,
+				minHeight: wp(20),
 				position: 'absolute',
-				top: 50,
+				top: wp(12.5),
 			}
 		})
 
@@ -159,47 +158,47 @@ const styles = StyleSheet.create({
 		fontWeight: '600',
 	},
 	//// modal
-	buttonView1: {
-		borderRadius: wp(2.5),
-		overflow: 'hidden',
-		backgroundColor: theme.Leave_Type_Text,
+	// buttonView1: {
+	// 	borderRadius: wp(2.5),
+	// 	overflow: 'hidden',
+	// 	backgroundColor: theme.Leave_Type_Text,
 
-	},
-	Heading: {
-		fontSize: wp(4.5),
-		color:theme.PRIMARY_TEXT_COLOR_BLACK,
-		letterSpacing: wp(0.075), //0.3
-	},
-	btn1: {
-		width: '100%',
-		backgroundColor: theme.PRIMARY_BG,
+	// },
+	// Heading: {
+	// 	fontSize: wp(4.5),
+	// 	color:theme.PRIMARY_TEXT_COLOR_BLACK,
+	// 	letterSpacing: wp(0.075), //0.3
+	// },
+	// btn1: {
+	// 	width: '100%',
+	// 	backgroundColor: theme.PRIMARY_BG,
 	
-		flexDirection: 'row',
-		alignItems: 'center',
-		paddingVertical: wp(3.5),
-		paddingHorizontal: wp(7.5),
-	},
-	middleBtn: {
-		borderTopWidth: wp(0.3), //1.2
-		borderBottomWidth: wp(0.3), // 1.2
-		borderColor: theme.Input_View_Border,
-	},
-	camaraIcon: {
-		fontSize: wp(5.25), //21
-		color:theme.PRIMARY_TEXT_COLOR_BLACK,
+	// 	flexDirection: 'row',
+	// 	alignItems: 'center',
+	// 	paddingVertical: wp(3.5),
+	// 	paddingHorizontal: wp(7.5),
+	// },
+	// middleBtn: {
+	// 	borderTopWidth: wp(0.3), //1.2
+	// 	borderBottomWidth: wp(0.3), // 1.2
+	// 	borderColor: theme.Input_View_Border,
+	// },
+	// camaraIcon: {
+	// 	fontSize: wp(5.25), //21
+	// 	color:theme.PRIMARY_TEXT_COLOR_BLACK,
 		
-	},
-	btn1Txt: {
-		fontSize: wp(4),
-		color:theme.PRIMARY_TEXT_COLOR_BLACK,
-		paddingLeft: wp(5),
-		letterSpacing: wp(0.125),
-	},
-	imageIcon: {
-		fontSize: wp(5.5),
-		color:theme.PRIMARY_TEXT_COLOR_BLACK,
+	// },
+	// btn1Txt: {
+	// 	fontSize: wp(4),
+	// 	color:theme.PRIMARY_TEXT_COLOR_BLACK,
+	// 	paddingLeft: wp(5),
+	// 	letterSpacing: wp(0.125),
+	// },
+	// imageIcon: {
+	// 	fontSize: wp(5.5),
+	// 	color:theme.PRIMARY_TEXT_COLOR_BLACK,
 
-	},
+	// },
 	
 
 });

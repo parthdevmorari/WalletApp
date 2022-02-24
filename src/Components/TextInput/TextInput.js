@@ -1,10 +1,7 @@
 import React from 'react';
-import {TextInput, Image} from 'react-native';
-import * as resources from 'resources';
+import {TextInput} from 'react-native';
 import { theme } from "../../Constants/Theme";
 import styles from './TextInputStyle';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
 const TextField = ({
   value,
   textFieldStyle,

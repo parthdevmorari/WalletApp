@@ -5,6 +5,7 @@ import {Switch} from '@Component';
 
 const RowItem = (props) => {
 
+
 	const { subTitle,title,value,onValueChange,imageSource,isSwitch,inactiveTrackColor,activeThumbColor,inactiveThumbColor,activeTrackColor, containerStyle } = props;
 
 		return(
@@ -25,7 +26,7 @@ const RowItem = (props) => {
                <View style={styles.switchContainer}>
                     <Switch
                         trackColor={{ false: inactiveTrackColor, true: activeTrackColor }}
-                        thumbColor={value ?inactiveThumbColor : activeThumbColor}
+                        thumbColor={value ? inactiveThumbColor : activeThumbColor}
                         onPress={onValueChange}
                         value={value}
                         style={[styles.swtichStyle]}

@@ -1,16 +1,16 @@
 import {StyleSheet} from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import { color } from "../../Constants/Color";
-import { theme } from '../../Constants/Theme';
-
 const styles = StyleSheet.create({
 	container: {
 		height:hp(100),
-		backgroundColor: '#0C365A',
+		backgroundColor:color._0C365A,
+
 	},
 	safeAreaView:{
 		flex: 0,
-		backgroundColor: '#0C365A',
+		backgroundColor:color._0C365A,
+
 	},
 	topContainer:{
 		width: '100%',
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		top: 0, 
 		left: 0,
-		backgroundColor: '#0C365A',
+		backgroundColor:color._0C365A,
 		zIndex: 0, 
 	},
 	scrollContainer:{

@@ -1,6 +1,5 @@
-import { StyleSheet, Dimensions, StatusBar } from 'react-native';
+import { StyleSheet, Dimensions,} from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { color } from '../../Constants/Color';
 import { theme } from "../../Constants/Theme";
 
 const width = Dimensions.get('window').width;
@@ -10,7 +9,6 @@ const styles = StyleSheet.create({
 		marginBottom:wp(5),
     },
     labelCol:{
-        // flex: 0.6,
         marginBottom: 5,
 	},
 	label:{
@@ -19,13 +17,11 @@ const styles = StyleSheet.create({
 		fontSize:wp(4),
     },
     InputCol:{
-        // flex: 2.4,
         backgroundColor: '#fff',
 		borderColor: '#fff',
 		width: '100%',
 		borderRadius: 0,
 		marginBottom: 0,
-		// borderWidth:1,
 		borderColor:theme.PRIMARY_BORDER_COLOR,
 		borderBottomWidth:1,
 
@@ -38,7 +34,6 @@ const styles = StyleSheet.create({
 		borderStyle: 'solid',
         minHeight: 100,
         maxHeight: 'auto',
-		// paddingLeft: 10,
 		borderColor:theme.PRIMARY_BORDER_COLOR,
     },
     

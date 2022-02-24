@@ -5,5 +5,6 @@ import { theme } from '../../Constants/Theme';
 
 
 const styles = StyleSheet.create({
+    
 });
 export default styles;

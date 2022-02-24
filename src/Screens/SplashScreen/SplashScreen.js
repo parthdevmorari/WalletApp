@@ -1,11 +1,9 @@
 import React from "react";
 import { View, Text, Image,SafeAreaView } from "react-native";
 import styles from "./SplashScreenStyle";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as resources from 'resources';
 
-
-const SplashScreen = ({ navigation,  }) => {
+const SplashScreen = ({ navigation}) => {
 setTimeout(() => {
 	navigation.navigate('MyTab')
 }, 2000);
@@ -13,7 +11,7 @@ setTimeout(() => {
 	return (
 		<View  style={[styles.container]}>
 		<SafeAreaView style={styles.safeAreaView}/>
-		
+		<Image  style={styles.imgLogo} source={resources.Logo} />
 		</View>
 	);
 }

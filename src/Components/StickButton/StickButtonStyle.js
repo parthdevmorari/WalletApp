@@ -1,19 +1,15 @@
-import { StyleSheet, Dimensions, StatusBar } from 'react-native';
+import { StyleSheet,} from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { color } from "../../Constants/Color";
-
-const width = Dimensions.get('window').width;
-const ITEM_WIDTH = Math.round(width - 70);
 const styles = StyleSheet.create({
 	plusButton: {
 		position:'absolute',
 		right:15,
 		bottom:15,
-		// zIndex:9,
-		width:45,
-		height:45,
+		width:wp(11.25),
+		height:wp(11.25),
 		backgroundColor: color._0075bf,
-		borderRadius: 200,
+		borderRadius: wp(50),
 		justifyContent:'center',
 		alignItems:'center',
 	},

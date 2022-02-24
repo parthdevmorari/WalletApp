@@ -1,14 +1,13 @@
 import React, {useState,useEffect} from 'react';
 import {View, ScrollView, SafeAreaView} from 'react-native';
 import styles from './CardScreenStyle';
-import Details from '../../Components/Details';
 import {AmountDetail, Card, RowItem, ProgressBar} from '@Component';
 import * as resources from 'resources';
 import {color} from '../../Constants/Color';
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const CardScreen = ({navigation}) => {
-	const [isEnabled, setIsEnabled] = useState(false);
+	const [spendLimitvisiible, setspendLimitvisiible] = useState(false);
 	const [freezeCard, setFreezeCard] = useState(false);
 	const [spendLimit, setSpendLimit] = useState(0);
 	const [spendPer, setSpendPer] = useState(0);
@@ -39,10 +38,10 @@ const CardScreen = ({navigation}) => {
 	}, [spendingData])
 
 	const toggleSwitch = () => {
-		setIsEnabled(!isEnabled);
-		console.log("111111")
+		setspendLimitvisiible(!spendLimitvisiible);
 		navigation.navigate('Detail')
 	}
+	
 	const toggleFreezeCard = () => setFreezeCard(!freezeCard);
   
   return (
@@ -72,12 +71,12 @@ const CardScreen = ({navigation}) => {
 				<View style={styles.containeContainer}>
 					
 					<View style={styles.bottom}>
-					<ProgressBar
-						title={'Debit card spending limit'}
-						spendAmount={'$'+spendTotal}
-						totalAmountAvaliable={'$'+spendLimit}
-						progress={spendPer}
-					/>
+					{spendLimitvisiible && <ProgressBar
+								title={'Debit card spending limit'}
+								spendAmount={'$' + spendTotal}
+								totalAmountAvaliable={'$' + spendLimit}
+								progress={spendPer}
+							/>}
 						<RowItem
 							title={'Top-up account'}
 							imageSource={resources.insight}
@@ -88,7 +87,7 @@ const CardScreen = ({navigation}) => {
 							imageSource={resources.Transfermeter}
 							subTitle={"you haven't set anyspending limit on card"}
 							isSwitch={true}
-							value={isEnabled}
+							value={spendLimitvisiible}
 							onValueChange={toggleSwitch}
 							inactiveTrackColor={color._767577}
 							activeTrackColor={color._01D167}
@@ -102,10 +101,11 @@ const CardScreen = ({navigation}) => {
 							isSwitch={true}
 							value={freezeCard}
 							onValueChange={toggleFreezeCard}
-							inactiveTrackColor={color._767577}
 							activeTrackColor={color._01D167}
-							inactiveThumbColor={color._WHITE}
+							inactiveTrackColor={color._767577}
 							activeThumbColor={color._f4f3f4}
+							inactiveThumbColor={color._WHITE}
+							
 						/>
 						<RowItem
 							title={'Get new card'}

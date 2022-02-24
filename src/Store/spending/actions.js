@@ -1,5 +1,4 @@
 import * as types from './actionTypes'
-import ApiList from "../../webservice/ApiList";
 
 
 export const saveSpendingAmt = (amout,navigation) => {	

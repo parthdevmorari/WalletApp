@@ -11,7 +11,7 @@ export const Transfercard = require('./Transfercard.png');
 export const TransferDisable = require('./TransferDisable.png');
 export const Transfermeter = require('./Transfermeter.png');
 export const OFF = require('./off.png');
-export const on = require('./on.png');
+export const ON = require('./on.png');
 export const NOINTERNET = require('./nointernet.png');
 
 
