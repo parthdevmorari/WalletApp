@@ -1,4 +1,4 @@
-import { StyleSheet, PixelRatio, Dimensions } from 'react-native';
+import { StyleSheet, Platform, Dimensions } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { color } from "../../Constants/Color";
 import { theme } from "../../Constants/Theme";

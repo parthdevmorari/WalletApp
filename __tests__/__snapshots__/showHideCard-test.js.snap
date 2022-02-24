@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowhideCard Component ShowhideCard  toMatchSnapshot 1`] = `
+<TouchableOpacity
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-end",
+        "backgroundColor": "#FFFFFF",
+        "borderTopLeftRadius": 9,
+        "borderTopRightRadius": 9,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "minWidth": 300,
+        "paddingBottom": 41.5,
+        "paddingTop": 11.5,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 37.5,
+        "width": 37.5,
+      }
+    }
+  >
+    <Image
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#01D167",
+        "fontSize": 22.5,
+        "fontWeight": "700",
+        "paddingLeft": 9.5,
+        "textAlign": "center",
+      }
+    }
+  />
+</TouchableOpacity>
+`;

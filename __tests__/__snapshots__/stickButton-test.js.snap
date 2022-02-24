@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StickButton Component StickButton  toMatchSnapshot 1`] = `
+<TouchableOpacity
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#0075bf",
+        "borderRadius": 375,
+        "bottom": 15,
+        "height": 84.5,
+        "justifyContent": "center",
+        "position": "absolute",
+        "right": 15,
+        "width": 84.5,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "elevation": 8,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 4.65,
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      name="plus"
+      size={12}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 75,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea Component TextArea  toMatchSnapshot 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "marginBottom": 37.5,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 30,
+              "fontWeight": "700",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "borderBottomWidth": 1,
+            "borderColor": "#cbcbcb",
+            "borderRadius": 0,
+            "marginBottom": 0,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TextInput
+        keyboardType="default"
+        multiline={true}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholderTextColor="#B2B2B2"
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "borderColor": "#cbcbcb",
+              "borderStyle": "solid",
+              "color": "#000000",
+              "fontSize": 30,
+              "maxHeight": "auto",
+              "minHeight": 100,
+              "textAlignVertical": "top",
+            },
+            undefined,
+            Object {},
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+</View>
+`;

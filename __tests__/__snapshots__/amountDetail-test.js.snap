@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Amount Detail Component Amount Detail  toMatchSnapshot 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 45,
+      "paddingTop": 19,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "flex-end",
+          "height": 56.5,
+          "marginRight": 19,
+          "marginTop": 37.5,
+          "width": 56.5,
+        },
+      ]
+    }
+  >
+    <Image
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 45,
+            "fontWeight": "bold",
+            "marginBottom": 75,
+          },
+        ]
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 26.5,
+            "fontWeight": "500",
+            "textAlign": "left",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginTop": 19,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#01D167",
+              "borderRadius": 7.5,
+              "height": 45,
+              "width": 75,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 26.5,
+              "fontWeight": "bold",
+              "marginTop": 5.5,
+              "textAlign": "center",
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 45,
+              "fontWeight": "bold",
+              "marginLeft": 20.5,
+              "textAlignVertical": "center",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component Button  toMatchSnapshot 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 45,
+      "paddingTop": 19,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "flex-end",
+          "height": 56.5,
+          "marginRight": 19,
+          "marginTop": 37.5,
+          "width": 56.5,
+        },
+      ]
+    }
+  >
+    <Image
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 45,
+            "fontWeight": "bold",
+            "marginBottom": 75,
+          },
+        ]
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 26.5,
+            "fontWeight": "500",
+            "textAlign": "left",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginTop": 19,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#01D167",
+              "borderRadius": 7.5,
+              "height": 45,
+              "width": 75,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 26.5,
+              "fontWeight": "bold",
+              "marginTop": 5.5,
+              "textAlign": "center",
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 45,
+              "fontWeight": "bold",
+              "marginLeft": 20.5,
+              "textAlignVertical": "center",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

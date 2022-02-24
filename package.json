@@ -16,7 +16,9 @@
     "@react-navigation/material-bottom-tabs": "^6.1.1",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
     "axios": "^0.24.0",
+    "enzyme-to-json": "^3.6.2",
     "moment": "^2.29.1",
     "react": "17.0.2",
     "react-native": "0.67.2",
@@ -34,6 +36,7 @@
     "react-native-vector-icons": "^9.1.0",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2",
+    "redux-mock-store": "^1.5.4",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1"
   },
@@ -48,6 +51,12 @@
     "react-test-renderer": "17.0.2"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "./jestSetupFile.js"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/@react-native-community/async-storage/(?!(lib))"
+    ]
   }
 }

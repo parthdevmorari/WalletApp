@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Button  toMatchSnapshot 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <TouchableOpacity
+    style={
+      Array [
+        undefined,
+        Object {
+          "backgroundColor": "#002A36",
+          "borderRadius": 3,
+          "paddingVertical": 10,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 30,
+            "fontWeight": "700",
+            "textAlign": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
+`;

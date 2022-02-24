@@ -5,7 +5,6 @@ export const hide = require('./Group.png');
 export const VisaLogo = require('./VisaLogo.png');
 export const AspireLogo = require('./AspireLogo.png');
 export const GroupMeter = require('./GroupMeter.png');
-export const Transfer = require('./Transfer.png');
 export const freezer = require('./freezer.png');
 export const Transfercard = require('./Transfercard.png');
 export const TransferDisable = require('./TransferDisable.png');

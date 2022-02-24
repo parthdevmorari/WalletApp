@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RowItem Component RowItem  toMatchSnapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginHorizontal": 45,
+        "paddingVertical": 30,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 32,
+          "width": 32,
+        }
+      }
+    >
+      <Image
+        style={
+          Array [
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "paddingLeft": 19,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#25345F",
+              "fontSize": 26.5,
+              "fontWeight": "bold",
+              "paddingBottom": 7.5,
+              "textAlign": "left",
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#222222",
+              "fontSize": 22.5,
+              "textAlign": "left",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

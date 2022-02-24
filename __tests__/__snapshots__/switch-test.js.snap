@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Component Switch  toMatchSnapshot 1`] = `
+<TouchableOpacity>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/resources/off.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "height": 25,
+          "resizeMode": "contain",
+          "width": 50,
+        },
+        Object {},
+      ]
+    }
+  />
+</TouchableOpacity>
+`;

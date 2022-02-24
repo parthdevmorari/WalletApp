@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpendAmount Component SpendAmount  toMatchSnapshot 1`] = `
+<TouchableOpacity
+  style={
+    Object {
+      "paddingTop": 60,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#e9fcf0",
+        "borderRadius": 7.5,
+        "paddingHorizontal": 52.5,
+        "paddingVertical": 22.5,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#20D167",
+          "fontSize": 22.5,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      S$ 
+    </Text>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`spendAmount Component spendAmount  toMatchSnapshot 1`] = `<spendAmount />`;

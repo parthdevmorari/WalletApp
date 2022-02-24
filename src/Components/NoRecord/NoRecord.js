@@ -6,7 +6,7 @@ import {TextInput} from '@Component';
 import Icon from 'react-native-vector-icons/Entypo';
 import Icon2 from 'react-native-vector-icons/Ionicons';
 
-export const InputField = (props) => {
+export const NoRecord = (props) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [icon, setIcon] = React.useState('eye-with-line');
 
@@ -27,4 +27,4 @@ export const InputField = (props) => {
   );
 };
 
-export default InputField;
+export default NoRecord;

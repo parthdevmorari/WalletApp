@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoRecord Component NoRecord  toMatchSnapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingLeft": 45,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingVertical": 19,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#222222",
+            "fontSize": 26.5,
+            "fontWeight": "bold",
+            "marginTop": 37.5,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#01D167",
+                "fontSize": 26.5,
+                "fontWeight": "bold",
+                "marginTop": 37.5,
+              },
+            ]
+          }
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#555555",
+                "fontSize": 13,
+                "fontWeight": "bold",
+                "marginTop": 20,
+                "paddingLeft": 11.5,
+                "paddingRight": 45,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <ProgressBar
+    animated={true}
+    animationConfig={
+      Object {
+        "bounciness": 0,
+      }
+    }
+    animationType="spring"
+    borderRadius={19}
+    borderWidth={0}
+    color="#01D167"
+    height={26.5}
+    indeterminate={false}
+    indeterminateAnimationDuration={1000}
+    progress={0}
+    unfilledColor="#e9fcf0"
+    useNativeDriver={false}
+    width={637.5}
+  />
+</View>
+`;

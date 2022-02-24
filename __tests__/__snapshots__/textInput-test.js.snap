@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea Component TextArea  toMatchSnapshot 1`] = `
+<TextInput
+  keyboardType="default"
+  onBlur={[Function]}
+  onChangeText={[Function]}
+  onFocus={[Function]}
+  onSubmitEditing={[Function]}
+  placeholderTextColor="#B2B2B2"
+  secureTextEntry={false}
+  style={
+    Array [
+      Object {
+        "color": "#000000",
+        "fontSize": 30,
+        "height": 50,
+        "width": "100%",
+      },
+      undefined,
+      Object {},
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField Component InputField  toMatchSnapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginBottom": 15,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderBottomWidth": 1,
+          "borderColor": "#cbcbcb",
+          "borderRadius": 3,
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <TextField
+        editable={true}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        secureTextEntry={false}
+        textFieldStyle={
+          Array [
+            Object {
+              "minHeight": 82.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
