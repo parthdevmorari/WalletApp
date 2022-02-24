@@ -8,7 +8,7 @@
 #We are making a mobile friendly UI as per instruction and given xd link.
 #We are making 2 pages design from xd and another pages as per needs.
 
-#What is in the application?: This is a demo application. That will help to manage users weekly expenses and list the all last 7 days expenses. User can also manage his weekly limit on spending limit page. 
+#What is in the application?: This is a demo application. That will help to manage users weekly expenses and list the all last 7 days expenses. User can also manage his weekly limit from spending limit page. 
 
 1. Debit Card page: there is only one functionality dynamic which is progress bar. Progress bar show a weekly total limit and expense in green color so use know how much limit is remain and how much is used.
 
@@ -22,7 +22,7 @@
 
 5. We write a some test case of application.
 
-Capability: In the application we used reduxt thunk but we also know the redux saga and in past we work on redux saga. 
+Capability: In the application we used reduxt thunk but we also know the redux saga and in past we worked with redux saga. 
 
 <b>Feedbacks will be appreciated</b>
 
